@@ -48,6 +48,13 @@ public:
 };
 
 int main() {
+	int h = 0, num, flg = 0, i = 0, wins = 0, bravo, size, pos, a = 0;
+        int flgA = 0, flgB = 0, flgC = 0, flgD = 0, flgE = 0, flgF = 0, flgG = 0, flgH = 0, flgI = 0, flgJ = 0, flgK = 0, flgL = 0, 
+        flgM = 0, flgN = 0, flgO = 0, flgP = 0, flgQ = 0, flgR = 0, flgS = 0, flgT = 0, flgU = 0, flgV = 0, flgW = 0, flgX = 0, flgY = 0, flgZ = 0,
+        flgchoise = 0;
+        char letter = 0, slovo[n], word[n];
+
+
 	char theme1[20] = {"1-Animals"}, theme2[20] = {"2-City"}, theme3[20] = {"3-Color"}, theme4[20] = {"4-Furniture"}, theme5[20] = {"5-Name"},
 	slova1[20][n] = {"Horse\0", "Goat\0", "Pig\0", "Cow\0", "Lion\0", "Fox\0", "Pony\0", "Frog\0", "Rat\0", "Wolf\0", "Mouse\0", "Crow\0", 
 	"Zebra\0", "Lemur\0", "Cat\0", "Dog\0", "Tiger\0", "Chipmunk\0", "Leopard\0", "Monkey\0"},
@@ -59,6 +66,9 @@ int main() {
 	"Cot\0", "Carpet\0", "Blinds\0", "Desk\0", "Coupe\0", "Rug\0", "Lamp\0"},
 	slova5[20][n] = {"Emily\0", "Andrew\0", "Jack\0", "James\0", "Wilson\0", "Dima\0", "Julia\0", "Ksenia\0", "Roman\0", "Fedor\0", "Max\0", "Egor\0", "Oleg\0",
 	"Wandy\0", "Alice\0", "Grisha\0", "Joe\0", "Colin\0", "Isabel\0", "Alex\0"};
+
+	int chaslo;
+	srand(time(NULL));
 
 	RenderWindow window(sf::VideoMode(1150, 640), "HUNGMAN");
 
@@ -124,6 +134,450 @@ int main() {
 
 		if (event.type == sf::Event::Closed)
 			window.close();
+
+		bravo = 0;
+
+		if(h <= 10 && !wins) {
+			if (event.type == sf::Event::KeyPressed && flg) {
+				if (event.key.code == sf::Keyboard::A && !flgA) {letter = 'a';
+					for (int i = 0; i < a; i++)
+						if(slovo[i] == letter) {
+							word[i] = letter;
+							pos = i;
+							A.sprite.move(15, 475);
+							A.sprite.move(68*pos, 0);
+							bravo = 1;
+						}
+					if (bravo == 0) {
+						A.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+					}
+					flgA = 1;
+				}
+
+				if (event.key.code == sf::Keyboard::B  && !flgB) {letter = 'b';
+					for (int i = 0; i < a; i++)
+						if(slovo[i] == letter) {
+							word[i] = letter;
+							pos = i;
+							B.sprite.move(-45, 475);
+							B.sprite.move(68*pos, 0);
+							bravo = 1;
+					}
+					if (bravo == 0) {
+						B.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+					}
+					flgB = 1;
+				}
+
+				 if (event.key.code == sf::Keyboard::C  && !flgC) {letter = 'c';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        C.sprite.move(-105, 475);       
+                                                        C.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                C.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgC = 1;
+                                }    
+
+                                if (event.key.code == sf::Keyboard::D  && !flgD) {letter = 'd';
+                                        for (int i = 0; i < a; i++)
+						if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        D.sprite.move(-165, 475);       
+                                                        D.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                D.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgD = 1;
+                                }    
+				
+				if (event.key.code == sf::Keyboard::E  && !flgE) {letter = 'e';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        E.sprite.move(-225, 475);       
+                                                        E.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                E.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgE = 1;
+                                }   
+
+				if (event.key.code == sf::Keyboard::F  && !flgF) {letter = 'f';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        F.sprite.move(-285, 475);       
+                                                        F.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                F.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgF = 1;
+                                }   
+
+				 if (event.key.code == sf::Keyboard::G  && !flgG) {letter = 'g'; 
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        G.sprite.move(-345, 475);       
+                                                        G.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                G.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgG = 1;
+                                }   
+
+				 if (event.key.code == sf::Keyboard::H && !flgH) {letter = 'h';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        H.sprite.move(-405, 475);       
+                                                        H.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                H.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgH = 1;
+                                }    
+
+				if (event.key.code == sf::Keyboard::I && !flgI) {letter = 'i';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        I.sprite.move(-465, 475);       
+                                                        I.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                I.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgI = 1;
+                                }   
+
+				if (event.key.code == sf::Keyboard::J  && !flgJ) {letter = 'j';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        J.sprite.move(-525, 475);       
+                                                        J.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                J.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgJ = 1;
+                                }   
+
+
+				 if (event.key.code == sf::Keyboard::K  && !flgK) {letter = 'k';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        K.sprite.move(15, 417); 
+                                                        K.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                K.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgK = 1;
+                                }   
+
+				if (event.key.code == sf::Keyboard::L  && !flgL) {letter = 'l';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        L.sprite.move(-45, 417);        
+                                                        L.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                L.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgL = 1;
+                                }    
+
+				 if (event.key.code == sf::Keyboard::M && !flgM) {letter = 'm';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        M.sprite.move(-105, 417);       
+                                                        M.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                M.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgM = 1;
+                                }   
+
+				 if (event.key.code == sf::Keyboard::N && !flgN) {letter = 'n';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        N.sprite.move(-165, 417);       
+                                                        N.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                N.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgN = 1;
+                                }   
+
+				if (event.key.code == sf::Keyboard::O && !flgO) {letter = 'o';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        O.sprite.move(-225, 417);       
+                                                        O.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                O.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgO = 1;
+                                }    
+
+				if (event.key.code == sf::Keyboard::P && !flgP) {letter = 'p';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        P.sprite.move(-285, 417);       
+                                                        P.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                P.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgP = 1;
+                                }    
+
+				 if (event.key.code == sf::Keyboard::Q && !flgQ) {letter = 'q';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        Q.sprite.move(-345, 417);       
+                                                        Q.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                Q.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgQ = 1;
+                                }    
+
+				 if (event.key.code == sf::Keyboard::R && !flgR) {letter = 'r';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        R.sprite.move(-405, 417);       
+                                                        R.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                R.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgR = 1;
+                                }    
+
+				if (event.key.code == sf::Keyboard::S && !flgS) {letter = 's';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        S.sprite.move(-465, 417);       
+                                                        S.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                S.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgS = 1;
+                                }    
+
+
+				if (event.key.code == sf::Keyboard::T && !flgT) {letter = 't';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        T.sprite.move(-525, 417);       
+                                                        T.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                T.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgT = 1;
+                                }    
+				
+				if (event.key.code == sf::Keyboard::U && !flgU) {letter = 'u';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        U.sprite.move(15, 357); 
+                                                        U.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                U.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgU = 1;
+                                }   
+
+				if (event.key.code == sf::Keyboard::V && !flgV) {letter = 'v';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        V.sprite.move(-45, 357);        
+                                                        V.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                V.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgV = 1;
+                                }    
+
+				                                if (event.key.code == sf::Keyboard::W && !flgW) {letter = 'w';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        W.sprite.move(-105, 357);       
+                                                        W.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                W.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgW = 1;
+                                }   
+
+                                if (event.key.code == sf::Keyboard::X && !flgX) {letter = 'x';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        X.sprite.move(-165, 357);       
+                                                        X.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                X.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgX = 1;
+                                }   
+
+                                if (event.key.code == sf::Keyboard::Y && !flgY) {letter = 'y';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        Y.sprite.move(-225, 357);       
+                                                        Y.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                       if (bravo == 0) {
+                                        Y.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgY = 1;
+                                }    
+
+                                if (event.key.code == sf::Keyboard::Z  && !flgZ) {letter = 'z';
+                                        for (int i = 0; i < a; i++)
+                                                if(slovo[i] == letter) {
+                                                        word[i] = letter;
+                                                        pos = i;
+                                                        Z.sprite.move(-285, 357);
+                                                        Z.sprite.move(68*pos, 0);
+                                                        bravo = 1;
+                                                }
+                                        if (bravo == 0) {
+                                                Z.sprite.setTextureRect(IntRect(0, 175, 0, 0)); 
+                                        }
+                                        flgZ = 1;
+                                }
+
+                                if (bravo == 0) {  
+                                        h++;
+                                }
+                
+                                
+                
+                                if (h == 1) {
+					trys.sprite.setTextureRect(IntRect(60, 175, 53, 55));
+                                        base.sprite.setTextureRect(IntRect(230,253, 160, 47)); }
+                                if (h > 1) {
+                                        trys.sprite.setTextureRect(IntRect(120, 175, 53, 55));
+                                        base2.sprite.setTextureRect(IntRect(12, 321, 25, 245)); }
+                                if (h > 2) {
+                                        trys.sprite.setTextureRect(IntRect(180, 175, 53, 55));
+                                        base3.sprite.setTextureRect(IntRect(393,250, 205, 20)); }
+                                if (h > 3) {
+                                        trys.sprite.setTextureRect(IntRect(240, 175, 53, 55));
+                                        base4.sprite.setTextureRect(IntRect(399, 272, 23, 30)); }
+                                if (h > 4) {
+					trys.sprite.setTextureRect(IntRect(300, 175, 53, 55$
+                                        head.sprite.setTextureRect(IntRect(48, 320, 80, 55);}			
+                                if (h > 5) {
+                                        trys.sprite.setTextureRect(IntRect(360, 175, 53, 55));
+                                        body.sprite.setTextureRect(IntRect(160, 320, 16, 65)); }
+                                if (h > 6) {
+                                        trys.sprite.setTextureRect(IntRect(420, 175, 53, 55));
+                                        lefthand.sprite.setTextureRect(IntRect(215, 338, 35, 30)); }
+                                if (h > 7) {
+                                        trys.sprite.setTextureRect(IntRect(480, 175, 53, 55));
+                                        righthand.sprite.setTextureRect(IntRect(277, 338, 35, 30)); }
+                                if (h > 8) {
+                                        trys.sprite.setTextureRect(IntRect(540, 175, 53, 55));
+                                        leftleg.sprite.setTextureRect(IntRect(320, 335, 26, 30)); }
+                                if (h > 9) {
+                                        trys.sprite.setTextureRect(IntRect(600, 175, 53, 55));
+                                        rightleg.sprite.setTextureRect(IntRect(347, 335, 23, 33));
+                                        face.sprite.setTextureRect(IntRect(423, 273, 43, 30));
+                                        loose.sprite.setTextureRect(IntRect(41, 426, 272, 66));
+                                }
+                                wins = 1;
+                                for (int i = 0; i < a; i++)
+                                        if(word[i] == '_')
+                                                wins = 0;
+                                if (wins == 1)
+                                        win.sprite.setTextureRect(IntRect(385, 309, 212, 68));
+                        } 
+                }
 
 		if ((event.type == sf::Event::KeyPressed)) {
 			if (!flg) {
