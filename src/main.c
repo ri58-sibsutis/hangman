@@ -135,7 +135,7 @@ int main() {
 		if (event.type == sf::Event::Closed)
 			window.close();
 
-if(wins || h > 9) {
+		if(wins || h > 9) {
                         restart.sprite.setTextureRect(IntRect(190, 644, 406, 40));
                         if (event.type == sf::Event::KeyPressed) {      
                                 if (event.key.code == sf::Keyboard::Y) {
@@ -535,7 +535,7 @@ if(wins || h > 9) {
                                         flgV = 1;
                                 }    
 
-				                                if (event.key.code == sf::Keyboard::W && !flgW) {letter = 'w';
+				if (event.key.code == sf::Keyboard::W && !flgW) {letter = 'w';
                                         for (int i = 0; i < a; i++)
                                                 if(slovo[i] == letter) {
                                                         word[i] = letter;
@@ -598,9 +598,8 @@ if(wins || h > 9) {
                                 if (bravo == 0) {  
                                         h++;
                                 }
-                
-                                
-                
+
+
                                 if (h == 1) {
 					trys.sprite.setTextureRect(IntRect(60, 175, 53, 55));
                                         base.sprite.setTextureRect(IntRect(230,253, 160, 47)); }
@@ -614,8 +613,8 @@ if(wins || h > 9) {
                                         trys.sprite.setTextureRect(IntRect(240, 175, 53, 55));
                                         base4.sprite.setTextureRect(IntRect(399, 272, 23, 30)); }
                                 if (h > 4) {
-					trys.sprite.setTextureRect(IntRect(300, 175, 53, 55$
-                                        head.sprite.setTextureRect(IntRect(48, 320, 80, 55);}			
+					trys.sprite.setTextureRect(IntRect(300, 175, 53, 55));
+                                        head.sprite.setTextureRect(IntRect(48, 320, 80, 55); }			
                                 if (h > 5) {
                                         trys.sprite.setTextureRect(IntRect(360, 175, 53, 55));
                                         body.sprite.setTextureRect(IntRect(160, 320, 16, 65)); }
