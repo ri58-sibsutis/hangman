@@ -125,6 +125,80 @@ int main() {
 		if (event.type == sf::Event::Closed)
 			window.close();
 
+		if ((event.type == sf::Event::KeyPressed)) {
+			if (!flg) {
+				if (event.key.code == sf::Keyboard::A) {
+					num = 1;
+					flgchoise = 1;
+				}
+
+				if (event.key.code == sf::Keyboard::B) {
+					num = 2;
+					flgchoise = 1;
+				}
+
+				if (event.key.code == sf::Keyboard::C) {
+					num = 3;
+					flgchoise = 1;
+
+				if (event.key.code == sf::Keyboard::D) {
+					num = 4;
+					flgchoise = 1;
+				}
+
+				if (event.key.code == sf::Keyboard::E) {
+					num = 5;
+					flgchoise = 1;
+				}
+
+				if (flgchoise) {
+					chaslo = 0 + rand() % 19;
+					texture.sprite.setTextureRect(IntRect(0, 175, 0, 0));
+					animals.sprite.setTextureRect(IntRect(0, 175, 0, 0);
+					city.sprite.setTextureRect(IntRect(0, 175, 0, 0));
+					color.sprite.setTextureRect(IntRect(0, 175, 0, 0));
+					furniture.sprite.setTextureRect(IntRect(0, 175, 0, 0));
+					name.sprite.setTextureRect(IntRect(0, 175, 0, 0));
+					enter.sprite.setTextureRect(IntRect(0, 175, 0, 0));
+					if (num == 1) {
+						for (int i = 0; i < n; i++)
+						slovo[i] = slova1[chaslo][i];
+					}
+					if (num == 2) {
+						for (int i = 0; i < n; i++)
+						slovo[i] = slova2[chaslo][i];
+					}
+
+					if (num == 3){
+						for (int i = 0; i < n; i++)
+							slovo[i] = slova3[chaslo][i];
+					}
+
+					if (num == 4){
+						for (int i = 0; i < n; i++)
+							slovo[i] = slova4[chaslo][i];
+					}
+
+					if (num == 5){
+						for (int i = 0; i < n; i++)
+						slovo[i] = slova5[chaslo][i];
+					}
+
+					while(slovo[a] != '\0')
+						a++;
+					size = a - 3;
+					number.sprite.setTextureRect(IntRect(55 + (44*size), 493, 42, 40));
+					cell.sprite.setTextureRect(IntRect(39, 713, 68*a, 53));
+					for (int i = 0; i < a; i++){
+						word[i] = '_';
+					}
+					if (slovo[0] >= 65 && slovo[0] <= 90) {
+						slovo[0] += 32; }
+					flg = 1;
+				}
+			}
+		}
+
 		window.clear();
 		window.draw(trys.sprite);
 
