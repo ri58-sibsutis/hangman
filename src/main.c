@@ -135,6 +135,70 @@ int main() {
 		if (event.type == sf::Event::Closed)
 			window.close();
 
+if(wins || h > 9) {
+                        restart.sprite.setTextureRect(IntRect(190, 644, 406, 40));
+                        if (event.type == sf::Event::KeyPressed) {      
+                                if (event.key.code == sf::Keyboard::Y) {
+                                        wins = 0; h = 0; flg = 0; i = 0; a = 0;
+                                        flgA = 0; flgB = 0; flgC = 0; flgD = 0; flgE = 0; flgF = 0; flgG = 0; flgH = 0; flgI = 0; flgJ = 0; flgK = 0; flgL = 0;
+                                        flgM = 0; flgN = 0; flgO = 0; flgP = 0; flgQ = 0; flgR = 0; flgS = 0; flgT = 0; flgU = 0; flgV = 0; flgW = 0; flgX = 0; flgY = 0; flgZ =$
+                                        flgchoise = 0;
+                                        letter = 0;
+
+                                        trys.sprite.setTextureRect(IntRect(0, 175, 53, 55));
+                                        base.sprite.setTextureRect(IntRect(230,253, 160, 0)); 
+                                        base2.sprite.setTextureRect(IntRect(12, 321, 25, 0));
+                                        base3.sprite.setTextureRect(IntRect(393,250, 205, 0));
+                                        base4.sprite.setTextureRect(IntRect(399, 272, 23, 0));
+					base4.sprite.setTextureRect(IntRect(399, 272, 23, 0));
+                                        head.sprite.setTextureRect(IntRect(48, 320, 80, 0));
+                                        body.sprite.setTextureRect(IntRect(160, 320, 16, 0));
+                                        lefthand.sprite.setTextureRect(IntRect(215, 338, 35, 0));
+                                        righthand.sprite.setTextureRect(IntRect(277, 338, 35, 0));
+                                        leftleg.sprite.setTextureRect(IntRect(320, 335, 26, 0)); 
+                                        rightleg.sprite.setTextureRect(IntRect(347, 335, 23, 0));
+                                        face.sprite.setTextureRect(IntRect(423, 273, 43, 0));
+                                        loose.sprite.setTextureRect(IntRect(41, 426, 272, 0));
+                                        win.sprite.setTextureRect(IntRect(385, 309, 212, 0));
+                                        A.sprite.setPosition(25, 25);  A.sprite.setTextureRect(IntRect(0, 0, 53, 54));
+                                        B.sprite.setPosition(85, 25); B.sprite.setTextureRect(IntRect(60, 0, 53, 54));
+                                        C.sprite.setPosition(145, 25); C.sprite.setTextureRect(IntRect(120, 0, 53, 54));
+                                        D.sprite.setPosition(205, 25); D.sprite.setTextureRect(IntRect(180, 0, 53, 54));
+                                        E.sprite.setPosition(265, 25); E.sprite.setTextureRect(IntRect(240, 0, 53, 54)); 
+                                        F.sprite.setPosition(325, 25); F.sprite.setTextureRect(IntRect(300, 0, 53, 54));
+                                        G.sprite.setPosition(385, 25); G.sprite.setTextureRect(IntRect(360, 0, 53, 54));
+                                        H.sprite.setPosition(445, 25); H.sprite.setTextureRect(IntRect(420, 0, 53, 54));
+                                        I.sprite.setPosition(505, 25); I.sprite.setTextureRect(IntRect(480, 0, 53, 54));
+                                        J.sprite.setPosition(565, 25); J.sprite.setTextureRect(IntRect(540, 0, 53, 54));
+                                        K.sprite.setPosition(25, 83); K.sprite.setTextureRect(IntRect(0, 58, 53, 54));
+                                        L.sprite.setPosition(85, 83); L.sprite.setTextureRect(IntRect(60, 58, 53, 54));
+                                        M.sprite.setPosition(145, 83); M.sprite.setTextureRect(IntRect(120, 58, 53, 54));
+                                        N.sprite.setPosition(205, 83); N.sprite.setTextureRect(IntRect(180, 58, 53, 54));
+                                        O.sprite.setPosition(265, 83); O.sprite.setTextureRect(IntRect(240, 58, 53, 54));
+                                        P.sprite.setPosition(325, 83); P.sprite.setTextureRect(IntRect(300, 58, 53, 54));
+                                        Q.sprite.setPosition(385, 83); Q.sprite.setTextureRect(IntRect(360, 58, 53, 54));
+                                        R.sprite.setPosition(445, 83); R.sprite.setTextureRect(IntRect(420, 58, 53, 54));
+                                        S.sprite.setPosition(505, 83); S.sprite.setTextureRect(IntRect(480, 58, 53, 54));
+                                        T.sprite.setPosition(565, 83); T.sprite.setTextureRect(IntRect(540, 58, 53, 54));
+                                        U.sprite.setPosition(25, 141); U.sprite.setTextureRect(IntRect(0, 116, 53, 54));
+                                        V.sprite.setPosition(85, 141); V.sprite.setTextureRect(IntRect(60, 116, 53, 54));
+                                        W.sprite.setPosition(145, 141); W.sprite.setTextureRect(IntRect(120, 116, 53, 54));
+                                        X.sprite.setPosition(205, 141); X.sprite.setTextureRect(IntRect(180, 116, 53, 54));
+                                        Y.sprite.setPosition(265, 141); Y.sprite.setTextureRect(IntRect(240, 116, 53, 54));
+                                        Z.sprite.setPosition(325, 141); Z.sprite.setTextureRect(IntRect(300, 116, 53, 54));
+                                        restart.sprite.setTextureRect(IntRect(190, 644, 406, 0));
+                                        texture.sprite.setTextureRect(IntRect(0, 0, 1150, 640));
+                                        animals.sprite.setTextureRect(IntRect(51, 542, 168, 38));
+                                        city.sprite.setTextureRect(IntRect(51, 592, 118, 38));
+                                        color.sprite.setTextureRect(IntRect(57, 638, 118, 38));
+                                        furniture.sprite.setTextureRect(IntRect( 51, 676, 209, 38));
+                                         name.sprite.setTextureRect(IntRect(215, 545, 144, 38));
+                                        enter.sprite.setTextureRect(IntRect(168, 590, 416, 55)); 
+                                }
+                        }
+                }
+
+
 		bravo = 0;
 
 		if(h <= 10 && !wins) {
